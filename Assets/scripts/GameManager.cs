@@ -10,6 +10,7 @@ using UnityEngine.Video;
 public class GameManager : MonoBehaviour
 {
 	private VideoPlayer vp;
+	private PointTracker pointTracker;
 
 	public GameObject dropdownWin;
 
@@ -17,10 +18,12 @@ public class GameManager : MonoBehaviour
 	{
 		vp = gameObject.GetComponent<VideoPlayer> ();
 		vp.loopPointReached += EndReached;
+		pointTracker = GameObject.Find("PlayerManager").GetComponent<PointTracker>();
 	}
 
 	void EndReached (UnityEngine.Video.VideoPlayer vp)
 	{
+		pointTracker.points++;
 		dropdownWin.SetActive(true);
 	}
 }
