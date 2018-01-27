@@ -20,11 +20,11 @@ public class StarWidth : MonoBehaviour {
 	{
 
 		Debug.Log("" + pointTracker.points + "  "  + rectTransform.offsetMax.x);
-		if (pointTracker.points == 1 && rectTransform.offsetMax.x < -830) {
+		if (pointTracker.points == 1 && rectTransform.offsetMax.x < -70) {
 			UpdateStarWidth ();
-		} else if (pointTracker.points == 2 && rectTransform.offsetMax.x < -700) {
+		} else if (pointTracker.points == 2 && rectTransform.offsetMax.x < 40) {
 			UpdateStarWidth ();
-		} else if (pointTracker.points == 3 && rectTransform.offsetMax.x < -550) {
+		} else if (pointTracker.points == 3 && rectTransform.offsetMax.x < 150) {
 			UpdateStarWidth ();
 		}
 	}
