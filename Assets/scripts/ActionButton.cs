@@ -19,6 +19,7 @@ public class ActionButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void TaskOnClick () {
+		gameObject.GetComponent<AudioSource>().Play();
 		vp.Stop();
 		dropdownLose.SetActive(true);
 	}

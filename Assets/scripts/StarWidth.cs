@@ -19,16 +19,16 @@ public class StarWidth : MonoBehaviour {
 	void Update ()
 	{
 
-		if (pointTracker.points == 1 && rectTransform.offsetMax.x < -80) {
+		if (pointTracker.points == 1 && rectTransform.offsetMax.x < -118) {
 			UpdateStarWidth ();
-		} else if (pointTracker.points == 2 && rectTransform.offsetMax.x < 40) {
+		} else if (pointTracker.points == 2 && rectTransform.offsetMax.x < 48) {
 			UpdateStarWidth ();
-		} else if (pointTracker.points == 3 && rectTransform.offsetMax.x < 200) {
+		} else if (pointTracker.points == 3 && rectTransform.offsetMax.x < 220) {
 			UpdateStarWidth ();
 		}
 	}
 
 	void UpdateStarWidth(){
-		rectTransform.offsetMax = new Vector2 (rectTransform.offsetMax.x + 2f, rectTransform.offsetMax.y);
+		rectTransform.offsetMax = new Vector2 (rectTransform.offsetMax.x + 6f, rectTransform.offsetMax.y);
 	}
 }

@@ -17,8 +17,12 @@ public class RectTransformFlyIn : MonoBehaviour {
 
 	public string nextLevelName;
 
+	public float speed = .5f;
+
     /// The side from where the rect transform should fly in.
     public Sides side;
+
+    public bool disableTransition = true;
  
     /// The transition factor (from 0 to 1) between inside and outside.
     [Range(0,1)]
@@ -65,15 +69,17 @@ public class RectTransformFlyIn : MonoBehaviour {
  
     void Update ()
 	{
+		if (dismissed && disableTransition) {
+        	SceneManager.LoadScene(nextLevelName, LoadSceneMode.Single);
+        	Destroy(this);
+		}
 		if (transition <= 1f && !dismissed) {
-			transition += .05f;
+			transition += speed;
 			rectTransform.localPosition = Vector2.Lerp (outside, inside, transition);
 		} else if (transition >= 0 && dismissed) {
-			transition -= .05f;
+			transition -= speed;
 			rectTransform.localPosition = Vector2.Lerp (outside, inside, transition);
 		} else if (dismissed) {
-
-			// Only specifying the sceneName or sceneBuildIndex will load the Scene with the Single mode
         	SceneManager.LoadScene(nextLevelName, LoadSceneMode.Single);
         	Destroy(this);
 		}

@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/scenes/start.unity
     guid: 00978d4906eff4b25ad260e156409b68
   - enabled: 1
+    path: Assets/scenes/instructions.unity
+    guid: d5c7f5fd1ae8941dcac38cc44b56ddf5
+  - enabled: 1
     path: Assets/scenes/yawn.unity
     guid: 6db998ba8b6524c80ae8c30e33218bd6
   - enabled: 1
     path: Assets/scenes/itch.unity
-    guid: 03b9b3c5ce3da4a328626cacd3d5699e
+    guid: 7b96292db7e1e4545978ac206d8ea7d0
+  - enabled: 1
+    path: Assets/scenes/laugh.unity
+    guid: ea704a215a0404e39af3bf4d5d6c88f5
+  - enabled: 1
+    path: Assets/scenes/end.unity
+    guid: 62c3a1212f386446a811a5c6e1c2aac2
